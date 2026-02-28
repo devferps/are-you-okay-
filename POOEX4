@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+public class POOEX4{
+    
+    public static boolean EhPar(int numero){
+       return numero % 2 ==0;
+    }
+    public static void main(String[] args){
+        Scanner teclado = new Scanner(System.in);
+        int numero;
+        System.out.println("Digite numeros inteiros(0 para sair): ");
+
+        while(true){
+            System.out.println("Numero: ");
+            numero = teclado.nextInt();
+            if (numero==0){
+                System.out.println("Programa encerrado");
+                break;
+            } 
+            if (EhPar(numero)){
+                System.out.println("O numero " + numero + " é par");
+            } else {
+                System.out.println("O numero " + numero + " é impar");
+            }
+        }
+        teclado.close();
+    }
+}
+           
+        
